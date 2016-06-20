@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/islate/SlateVideo360"
   s.license          = 'Apache 2.0'
   s.author           = { "林溢泽" => "linyize@gmail.com" }
-  s.source           = { :git => "https://github.com/islate/SlateVideo360.git", :branch => "master" }
+  s.source           = { :git => "https://github.com/islate/SlateVideo360.git", :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
 
