@@ -1,7 +1,9 @@
 //
 //  VideoRenderer.h
-//  CardboardSDK-iOS
+//  SlateVideo360
 //
+//  Created by linyize on 16/2/26.
+//  Copyright © 2016年 islate. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,9 +1,9 @@
 //
 //  Video360ViewController.h
-//  Slate
+//  SlateVideo360
 //
 //  Created by linyize on 16/2/26.
-//  Copyright © 2016年 Modern Mobile Digital Media Company Limited. All rights reserved.
+//  Copyright © 2016年 islate. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
