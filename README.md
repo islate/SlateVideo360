@@ -1,5 +1,5 @@
 # SlateVideo360
-同时支持360度全景视频和谷歌cardboard vr视频播放
+iOS Player support 360 Degree Video. And support Google Cardboard VR play mode.
 
 # usage
 pod 'SlateVideo360'
