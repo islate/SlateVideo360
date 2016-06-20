@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "SlateVideo360"
   s.version          = "0.1.0"
-  s.summary          = "SlateVideo360"
+  s.summary          = "iOS Player support 360 Degree Video and Google Cardboard Video."
 
   s.description      = <<-DESC
-                        SlateVideo360
+                        Open Source iOS 360 Degree Panorama Video Player. Add Google Cardboard VR Video Play Mode.
                        DESC
 
   s.homepage         = "https://github.com/islate/SlateVideo360"
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "SlateVideo360/*.{h,m}"
   s.resource = 'SlateVideo360/Resources/HTY360PlayerVC.xib', 'SlateVideo360/Resources/Assets.xcassets', 'SlateVideo360/Resources/Shader.{fsh,vsh}'
-  s.dependency = 'HTY360Player'
-  s.dependency = 'CardboardSDK'
+  s.dependency = 'HTY360Player', '0.1.0'
+  s.dependency = 'CardboardiOSSDK', '0.7.2.1'
   
 end
