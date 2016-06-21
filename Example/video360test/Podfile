@@ -1,1 +1,1 @@
-pod 'SlateVideo360', :path => '../../'
+pod 'SlateVideo360'
