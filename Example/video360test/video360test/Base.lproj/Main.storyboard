@@ -18,10 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy1-gW-zqf">
-                                <rect key="frame" x="110" y="160" width="73" height="30"/>
-                                <state key="normal" title="Play Demo"/>
+                                <rect key="frame" x="116" y="160" width="62" height="30"/>
+                                <state key="normal" title="Play URL"/>
                                 <connections>
-                                    <action selector="playdemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ytf-cP-m6o"/>
+                                    <action selector="playURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaw-1C-7fJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jk-08-WRe">
+                                <rect key="frame" x="119" y="210" width="57" height="30"/>
+                                <state key="normal" title="Play File"/>
+                                <connections>
+                                    <action selector="playFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADH-hX-NNB"/>
                                 </connections>
                             </button>
                         </subviews>
