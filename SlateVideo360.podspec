@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "SlateVideo360"
   s.version          = "0.1.0"
-  s.summary          = "iOS Player support 360 Degree Video and Google Cardboard Video."
+  s.summary          = "iOS VR Player support 360 Degree Video and Google Cardboard."
 
   s.description      = <<-DESC
-                        Open Source iOS 360 Degree Panorama Video Player. Add Google Cardboard VR Video Play Mode.
+                        Open Source iOS VR Player support 360 Degree Video and Google Cardboard.
                        DESC
 
   s.homepage         = "https://github.com/islate/SlateVideo360"
