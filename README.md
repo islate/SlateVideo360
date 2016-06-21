@@ -1,5 +1,5 @@
 # SlateVideo360
-iOS Player support 360 Degree Video. And support Google Cardboard.
+iOS VR Player support 360 Degree Video and Google Cardboard.
 
 ## Usage
 pod 'SlateVideo360'
