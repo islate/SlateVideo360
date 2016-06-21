@@ -19,7 +19,7 @@ pod install
 
 ![screenshot](https://github.com/hanton/HTY360Player/raw/master/Screenshot/PlayLocalVideo.gif)
 
-* Play 360° Video to Google Cardboard VR Glass
+* Play 360° Video on Google Cardboard Mode
 
-![screenshot](http://7b1gcw.com1.z0.glb.clouddn.com/cardboard.png)
+![screenshot](http://7b1gcw.com1.z0.glb.clouddn.com/cardboard.png?t=1)
 
