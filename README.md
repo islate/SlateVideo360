@@ -2,7 +2,12 @@
 iOS VR Player support 360 Degree Video and Google Cardboard.
 
 ## Usage
-pod 'SlateVideo360'
+
+ target 'your target name' do
+ 
+ pod 'SlateVideo360'
+ 
+ end
 
 ## Run Example
 cd Example/video360test
