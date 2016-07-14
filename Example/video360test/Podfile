@@ -1,1 +1,3 @@
+target "video360test" do
 pod 'SlateVideo360'
+end
