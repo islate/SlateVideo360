@@ -38,7 +38,7 @@ enum {
     UNIFORM_COLOR_CONVERSION_MATRIX,
     NUM_UNIFORMS
 };
-GLint uniforms[NUM_UNIFORMS];
+GLint my_uniforms[NUM_UNIFORMS];
 
 @interface VideoRenderer ()
 {
@@ -170,7 +170,7 @@ GLint uniforms[NUM_UNIFORMS];
 
     glBindVertexArrayOES(_vertexArrayID);
     
-    glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjection.m);
+    glUniformMatrix4fv(my_uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjection.m);
     
     CVPixelBufferRef pixelBuffer = [self.videoPlayerController retrievePixelBufferToDraw];
     
@@ -274,10 +274,10 @@ GLint uniforms[NUM_UNIFORMS];
     
     _vertexTexCoordAttributeIndex = [_program attributeIndex:@"texCoord"];
     
-    uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX] = [_program uniformIndex:@"modelViewProjectionMatrix"];
-    uniforms[UNIFORM_Y] = [_program uniformIndex:@"SamplerY"];
-    uniforms[UNIFORM_UV] = [_program uniformIndex:@"SamplerUV"];
-    uniforms[UNIFORM_COLOR_CONVERSION_MATRIX] = [_program uniformIndex:@"colorConversionMatrix"];
+    my_uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX] = [_program uniformIndex:@"modelViewProjectionMatrix"];
+    my_uniforms[UNIFORM_Y] = [_program uniformIndex:@"SamplerY"];
+    my_uniforms[UNIFORM_UV] = [_program uniformIndex:@"SamplerUV"];
+    my_uniforms[UNIFORM_COLOR_CONVERSION_MATRIX] = [_program uniformIndex:@"colorConversionMatrix"];
     
     [_program use];
     
@@ -430,9 +430,9 @@ int cbd_esGenSphere ( int numSlices, float radius, float **vertices, float **nor
     }
     
     [_program use];
-    glUniform1i(uniforms[UNIFORM_Y], 0);
-    glUniform1i(uniforms[UNIFORM_UV], 1);
-    glUniformMatrix3fv(uniforms[UNIFORM_COLOR_CONVERSION_MATRIX], 1, GL_FALSE, _preferredConversion);
+    glUniform1i(my_uniforms[UNIFORM_Y], 0);
+    glUniform1i(my_uniforms[UNIFORM_UV], 1);
+    glUniformMatrix3fv(my_uniforms[UNIFORM_COLOR_CONVERSION_MATRIX], 1, GL_FALSE, _preferredConversion);
     
     GLCheckForError();
     
