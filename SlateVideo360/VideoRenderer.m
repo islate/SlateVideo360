@@ -24,7 +24,7 @@
 // Color Conversion Constants (YUV to RGB) including adjustment from 16-235/16-240 (video range)
 
 // BT.709, which is the standard for HDTV.
-static const GLfloat kColorConversion709[] = {
+static const GLfloat my_kColorConversion709[] = {
     1.164,  1.164, 1.164,
     0.0, -0.213, 2.112,
     1.793, -0.533,   0.0,
@@ -88,7 +88,7 @@ GLint my_uniforms[NUM_UNIFORMS];
     _cameraZ = 0.01f;
     
     // Set the default conversion to BT.709, which is the standard for HDTV.
-    _preferredConversion = kColorConversion709;
+    _preferredConversion = my_kColorConversion709;
     
     _overture = DEFAULT_OVERTURE;
     
