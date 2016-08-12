@@ -16,6 +16,10 @@ pod install
 
 open video360test.xcworkspace
 
+## Download Example
+
+http://7b1gcw.com1.z0.glb.clouddn.com/video360test.zip
+
 ## Features
 
 * Play Online 360° Video
