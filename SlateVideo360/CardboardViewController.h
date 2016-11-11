@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import "CBDViewController.h"
+#import "VideoRenderer.h"
 
 @class HTY360PlayerVC;
 
 @interface CardboardViewController : CBDViewController
 
 @property (strong, nonatomic) HTY360PlayerVC* videoPlayerController;
+@property (nonatomic, strong) VideoRenderer *videoRenderer;
 
 @end

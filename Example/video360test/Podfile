@@ -1,3 +1,4 @@
 target "video360test" do
-pod 'SlateVideo360'
+pod 'HTY360Player', :git => "https://github.com/Invisibi/HTY360Player.git", :branch => "master"
+pod 'SlateVideo360', :local => "../../"
 end
