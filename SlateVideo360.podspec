@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SlateVideo360"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "iOS VR Player support 360 Degree Video and Google Cardboard."
 
   s.description      = <<-DESC
@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source_files = "SlateVideo360/*.{h,m}"
   s.resource = 'SlateVideo360/Resources/HTY360PlayerVC.xib', 'SlateVideo360/Resources/Assets.xcassets', 'SlateVideo360/Resources/Shader.{fsh,vsh}'
   s.dependency 'HTY360Player', '0.1.1'
-  s.dependency 'CardboardiOSSDK', '0.7.2.1'
+  s.dependency 'CardboardiOSSDK', '0.7.2.2'
   
 end
