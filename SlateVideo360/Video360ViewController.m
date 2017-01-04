@@ -22,11 +22,21 @@
 
 @implementation Video360ViewController
 
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [self.view addGestureRecognizer:tap];
     [self configureCardboardButton];
+}
+
+- (void)tap {
+    [self.glkViewController reAnchorToDegree:45];
+    [_cardboardVC.videoRenderer reAnchorToDegree:45];
 }
 
 - (void)viewWillAppear:(BOOL)animated

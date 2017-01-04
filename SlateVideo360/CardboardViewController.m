@@ -12,11 +12,10 @@
 #import <OpenGLES/ES2/glext.h>
 
 #include "GLHelpers.h"
-#import "VideoRenderer.h"
 
 @interface CardboardViewController() <CBDStereoRendererDelegate>
 
-@property (nonatomic, strong) VideoRenderer *videoRenderer;
+
 
 @end
 

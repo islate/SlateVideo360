@@ -59,7 +59,8 @@ GLint my_uniforms[NUM_UNIFORMS];
     GLuint _vertexIndicesBufferID;
     GLuint _vertexTexCoordID;
     GLuint _vertexTexCoordAttributeIndex;
-    
+
+    float currentYaw;
     float _fingerRotationX;
     float _fingerRotationY;
     float _savedGyroRotationX;
@@ -80,6 +81,10 @@ GLint my_uniforms[NUM_UNIFORMS];
 
 @implementation VideoRenderer
 
+- (void)reAnchorToDegree:(float)degree {
+    _fingerRotationX = currentYaw - degree;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -91,7 +96,7 @@ GLint my_uniforms[NUM_UNIFORMS];
     _preferredConversion = my_kColorConversion709;
     
     _overture = DEFAULT_OVERTURE;
-    
+    _fingerRotationX = 0;
     return self;
 }
 
@@ -141,9 +146,28 @@ GLint my_uniforms[NUM_UNIFORMS];
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     GLCheckForError();
-    
+
+
     // Apply the eye transformation to the camera
-    _view = GLKMatrix4Multiply([eye eyeViewMatrix], _camera);
+
+    GLKMatrix4 matrix = eye.eyeViewMatrix;
+    float yaw = asinf(matrix.m02) * (180.f / M_PI);
+    if (matrix.m22 < 0) {
+        if (yaw >= 0) {
+            yaw = 180.f - yaw;
+        } else {
+            yaw = -180.f - yaw;
+        }
+    }
+    currentYaw = yaw * M_PI / 180;
+    NSLog(@"yaw: %f", yaw);
+    matrix = GLKMatrix4RotateY(matrix, _fingerRotationX);
+    _view = GLKMatrix4Multiply(matrix, _camera);
+//    NSLog(@"--------------------------");
+//    NSLog(@"%f %f %f %f", eye.eyeViewMatrix.m00, eye.eyeViewMatrix.m01, eye.eyeViewMatrix.m02, eye.eyeViewMatrix.m03);
+//    NSLog(@"%f %f %f %f", eye.eyeViewMatrix.m10, eye.eyeViewMatrix.m11, eye.eyeViewMatrix.m12, eye.eyeViewMatrix.m13);
+//    NSLog(@"%f %f %f %f", eye.eyeViewMatrix.m20, eye.eyeViewMatrix.m21, eye.eyeViewMatrix.m22, eye.eyeViewMatrix.m23);
+//    NSLog(@"%f %f %f %f", eye.eyeViewMatrix.m30, eye.eyeViewMatrix.m31, eye.eyeViewMatrix.m32, eye.eyeViewMatrix.m33);
 
     const float zNear = 0.1f;
     const float zFar = 100.0f;
